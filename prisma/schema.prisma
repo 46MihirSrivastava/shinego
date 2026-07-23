@@ -1,0 +1,36 @@
+// Prisma Schema for ShineGo
+
+generator client {
+  provider = "prisma-client"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+enum BookingStatus {
+  PENDING
+  CONFIRMED
+  COMPLETED
+  CANCELLED
+}
+
+enum VehicleType {
+  CAR
+  BIKE
+}
+
+model Booking {
+  id            String         @id @default(cuid())
+  customerName  String
+  phone         String
+  vehicleType   VehicleType
+  service       String
+  address       String
+  bookingDate   DateTime
+  bookingTime   String
+  status        BookingStatus  @default(PENDING)
+  createdAt     DateTime       @default(now())
+  updatedAt     DateTime       @updatedAt
+}
