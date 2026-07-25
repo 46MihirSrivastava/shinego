@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import Particles from "@/components/ui/Particles";
@@ -24,7 +25,6 @@ export default function Hero() {
 
       {/* Content */}
       <div className="relative z-10 mx-auto flex max-w-6xl flex-col items-center px-6 py-24 text-center">
-
         <motion.h1
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
@@ -33,9 +33,7 @@ export default function Hero() {
         >
           Premium
           <br />
-          <span className="text-yellow-400">
-            Car & Bike Wash
-          </span>
+          <span className="text-yellow-400">Car & Bike Wash</span>
           <br />
           At Your Doorstep
         </motion.h1>
@@ -57,16 +55,24 @@ export default function Hero() {
           transition={{ delay: 0.6 }}
           className="mt-10 flex flex-col gap-4 sm:flex-row"
         >
-          <Button className="rounded-full bg-yellow-400 px-8 py-6 text-lg font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-yellow-300">
-            Book Now
-          </Button>
+          <Link href="/book">
+            <Button className="rounded-full bg-yellow-400 px-8 py-6 text-lg font-semibold text-black transition-all duration-300 hover:scale-105 hover:bg-yellow-300">
+              Book Now
+            </Button>
+          </Link>
 
-          <Button
-            variant="outline"
-            className="rounded-full border-yellow-400 px-8 py-6 text-lg font-semibold text-yellow-400 transition-all duration-300 hover:scale-105 hover:bg-yellow-400 hover:text-black"
+          <a
+            href="https://wa.me/916206111322"
+            target="_blank"
+            rel="noopener noreferrer"
           >
-            WhatsApp
-          </Button>
+            <Button
+              variant="outline"
+              className="rounded-full border-yellow-400 px-8 py-6 text-lg font-semibold text-yellow-400 transition-all duration-300 hover:scale-105 hover:bg-yellow-400 hover:text-black"
+            >
+              WhatsApp
+            </Button>
+          </a>
         </motion.div>
 
         <motion.div
@@ -89,7 +95,6 @@ export default function Hero() {
             </div>
           ))}
         </motion.div>
-
       </div>
     </section>
   );

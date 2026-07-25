@@ -42,7 +42,7 @@ export default function Footer() {
             </h3>
 
             <ul className="space-y-3 text-gray-400">
-              <li>📞 +91 XXXXX XXXXX</li>
+              <li>📞 +91 6206111322</li>
               <li>📧 contact@shinego.in</li>
               <li>📍 Hajipur, Bihar</li>
             </ul>

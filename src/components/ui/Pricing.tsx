@@ -7,7 +7,7 @@ import { Check } from "lucide-react";
 const plans = [
   {
     title: "Bike Wash",
-    price: "₹99",
+    price: "₹69",
     popular: false,
     features: [
       "Foam Wash",
